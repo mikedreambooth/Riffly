@@ -128,10 +128,12 @@ export function renderRiffAudio(riff: Riff, opts: AudioOptions = {}): { samples:
     if (note.techniques?.some((t) => t.type === "palmMute" || t.type === "deadNote")) muted.add(`${bi + 1}:${ei + 1}:${note.string}`);
   })));
 
+  const isMuted = (n: PerformedNote) => muted.has(`${n.bar}:${n.event}:${n.string}`);
   for (const [i, n] of notes.entries()) {
-    const next = notes.find((o, j) => j > i && o.string === n.string && o.tick > n.tick);
-    renderNote(out, n, sr, ticksPerSecond, tone, countIn, muted.has(`${n.bar}:${n.event}:${n.string}`), random,
-      next?.tick ?? Infinity);
+    // Stop when the next note starts on the same string, or when a palm-muted note
+    // starts anywhere (the palm resting across the strings damps everything).
+    const next = notes.find((o, j) => j > i && o.tick > n.tick && (o.string === n.string || isMuted(o)));
+    renderNote(out, n, sr, ticksPerSecond, tone, countIn, isMuted(n), random, next?.tick ?? Infinity);
   }
 
   // Amp: high-pass to remove mud, drive, then a 2-pole cabinet low-pass.
