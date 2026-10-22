@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "title": "Paper Lanterns",
+  "meta": {"style": "indie pop arpeggios", "key": {"tonic": "D", "mode": "major"}, "tempo": 118, "timeSignature": {"beats": 4, "beatUnit": 4}, "tuning": ["E4", "B3", "G3", "D3", "A2", "E2"], "tone": "clean", "difficulty": 2},
+  "bars": [
+    { "events": [
+      {"duration": "8", "notes": [{"string": 4, "fret": 0, "pitch": "D3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 2, "pitch": "A3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 3, "pitch": "D4", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 2, "pitch": "F#4", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 3, "pitch": "D4", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 2, "pitch": "A3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 3, "pitch": "D4", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 2, "pitch": "A3", "techniques": [{"type": "letRing"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 4, "pitch": "F#3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 4, "pitch": "B3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 3, "pitch": "D4", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 4, "pitch": "B3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 4, "pitch": "F#3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 4, "pitch": "B3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 3, "pitch": "D4", "techniques": [{"type": "letRing"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "G2", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 0, "pitch": "D3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 0, "pitch": "G3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 0, "pitch": "B3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 0, "pitch": "G3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 0, "pitch": "D3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 0, "pitch": "G3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 0, "pitch": "B3", "techniques": [{"type": "letRing"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 5, "fret": 0, "pitch": "A2", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 2, "pitch": "E3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 2, "pitch": "A3", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 2, "pitch": "C#4", "techniques": [{"type": "letRing"}]}]},
+      {"duration": "2", "notes": [{"string": 1, "fret": 0, "pitch": "E4", "techniques": [{"type": "letRing"}]}]}
+    ] }
+  ],
+  "tips": "Hold each chord shape (D, Bm, G, A) and let the notes ring into each other; alternate-pick lightly."
+}

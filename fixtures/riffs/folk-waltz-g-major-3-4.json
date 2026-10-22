@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "title": "Hearth Waltz",
+  "meta": {"style": "folk waltz", "key": {"tonic": "G", "mode": "major"}, "tempo": 96, "timeSignature": {"beats": 3, "beatUnit": 4}, "tuning": ["E4", "B3", "G3", "D3", "A2", "E2"], "tone": "acoustic", "difficulty": 1},
+  "bars": [
+    { "events": [
+      {"duration": "4", "notes": [{"string": 6, "fret": 3, "pitch": "G2"}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 0, "pitch": "G3"}, {"string": 2, "fret": 0, "pitch": "B3"}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 0, "pitch": "G3"}, {"string": 2, "fret": 0, "pitch": "B3"}]}
+    ] },
+    { "events": [
+      {"duration": "4", "notes": [{"string": 4, "fret": 0, "pitch": "D3"}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 2, "pitch": "A3"}, {"string": 2, "fret": 3, "pitch": "D4"}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 2, "pitch": "A3"}, {"string": 2, "fret": 3, "pitch": "D4"}]}
+    ] },
+    { "events": [
+      {"duration": "4", "notes": [{"string": 5, "fret": 3, "pitch": "C3"}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 0, "pitch": "G3"}, {"string": 2, "fret": 1, "pitch": "C4"}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 0, "pitch": "G3"}, {"string": 2, "fret": 1, "pitch": "C4"}]}
+    ] },
+    { "events": [
+      {"duration": "4", "notes": [{"string": 6, "fret": 3, "pitch": "G2"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 0, "pitch": "G3"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 2, "pitch": "A3"}]},
+      {"duration": "4", "notes": [{"string": 2, "fret": 0, "pitch": "B3", "techniques": [{"type": "letRing"}]}]}
+    ] }
+  ],
+  "tips": "Bass note on beat one, light strum on beats two and three: boom-chick-chick."
+}

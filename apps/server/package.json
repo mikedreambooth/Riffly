@@ -1,0 +1,16 @@
+{
+  "name": "@riffly/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.0",
+    "@riffly/core": "*",
+    "@riffly/llm": "*",
+    "hono": "^4.10.0"
+  }
+}

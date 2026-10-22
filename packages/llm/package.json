@@ -1,0 +1,14 @@
+{
+  "name": "@riffly/llm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Riff generation: prompt building, LLM providers, validate-and-repair loop, fixture generator. Server-side only.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.30.0",
+    "@riffly/core": "*"
+  }
+}

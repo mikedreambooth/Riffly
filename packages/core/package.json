@@ -1,0 +1,14 @@
+{
+  "name": "@riffly/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Riff JSON schema, music theory, validation, MIDI export and ASCII tab. Runs in Node and the browser.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@tonejs/midi": "^2.0.28",
+    "zod": "^4.1.0"
+  }
+}

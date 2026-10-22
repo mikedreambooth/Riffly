@@ -1,0 +1,55 @@
+:root {
+  --bg: #f6f5f2;
+  --card: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6b6b70;
+  --border: #dedbd4;
+  --accent: #c2410c;
+  --accent-text: #ffffff;
+  --error: #b91c1c;
+  --warning: #a16207;
+  --tab-bg: #fbfaf7;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161618;
+    --card: #1f1f22;
+    --text: #ececef;
+    --muted: #9a9aa2;
+    --border: #34343a;
+    --accent: #fb923c;
+    --accent-text: #1d1d1f;
+    --error: #f87171;
+    --warning: #facc15;
+    --tab-bg: #18181b;
+  }
+}
+body { margin: 0; background: var(--bg); }
+main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 64px; }
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+h1 { margin: 0 0 16px; color: var(--accent); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+form.card { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; align-items: end; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; color: var(--muted); }
+label.wide { grid-column: 1 / -1; }
+label.key { grid-column: span 2; }
+@media (max-width: 480px) { label.key { grid-column: 1 / -1; } }
+label.inline { flex-direction: row; align-items: center; }
+input, select, button { font: inherit; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); color: var(--text); }
+input[type="range"], input[type="checkbox"] { padding: 0; }
+button { background: var(--accent); color: var(--accent-text); border: none; font-weight: 600; cursor: pointer; padding: 8px 14px; }
+button.secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+button:disabled { opacity: 0.6; cursor: progress; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.row select { flex: 1; }
+.nowrap { flex-wrap: nowrap; }
+.tip { margin: 8px 0; }
+.spread { justify-content: space-between; margin-bottom: 12px; }
+.muted { color: var(--muted); font-size: 0.9rem; }
+.tab, details pre { background: var(--tab-bg); border: 1px solid var(--border); border-radius: 6px; padding: 12px; overflow-x: auto; font-size: 13px; line-height: 1.35; }
+.issues { padding-left: 20px; font-size: 0.9rem; }
+.issues .error, .error { color: var(--error); }
+.issues .warning { color: var(--warning); }

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "title": "Highway Engine",
+  "meta": {"style": "classic rock", "key": {"tonic": "E", "mode": "minor"}, "tempo": 126, "timeSignature": {"beats": 4, "beatUnit": 4}, "tuning": ["E4", "B3", "G3", "D3", "A2", "E2"], "tone": "crunch", "difficulty": 2},
+  "bars": [
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "G2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 5, "pitch": "D3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": []},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "A2"}, {"string": 5, "fret": 7, "pitch": "E3"}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "A2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 7, "pitch": "E3", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "4", "notes": [{"string": 6, "fret": 3, "pitch": "G2"}, {"string": 5, "fret": 5, "pitch": "D3"}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "G2"}]},
+      {"duration": "8", "notes": [{"string": 5, "fret": 0, "pitch": "A2", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "notes": [{"string": 5, "fret": 2, "pitch": "B2"}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 0, "pitch": "D3"}]},
+      {"duration": "4", "notes": [{"string": 4, "fret": 2, "pitch": "E3", "techniques": [{"type": "vibrato"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "G2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 5, "pitch": "D3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": []},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "A2"}, {"string": 5, "fret": 7, "pitch": "E3"}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "A2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 7, "pitch": "E3", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "4", "notes": [{"string": 6, "fret": 3, "pitch": "G2"}, {"string": 5, "fret": 5, "pitch": "D3"}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "G2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 5, "pitch": "D3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": []},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "A2"}, {"string": 5, "fret": 7, "pitch": "E3"}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 7, "pitch": "B2"}, {"string": 5, "fret": 9, "pitch": "F#3"}]},
+      {"duration": "4", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "letRing"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "letRing"}]}]}
+    ] }
+  ],
+  "tips": "Keep the palm mutes chunky and lift the mute on the accented G5. The open-string fill in bar 2 should flow straight from the hammer-on."
+}

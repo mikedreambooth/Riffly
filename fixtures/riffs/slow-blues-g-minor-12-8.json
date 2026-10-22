@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "title": "Midnight in G",
+  "meta": {"style": "slow blues", "key": {"tonic": "G", "mode": "minor"}, "tempo": 72, "timeSignature": {"beats": 12, "beatUnit": 8}, "tuning": ["E4", "B3", "G3", "D3", "A2", "E2"], "tone": "overdrive", "difficulty": 3},
+  "bars": [
+    { "events": [
+      {"duration": "4", "dotted": true, "notes": [{"string": 2, "fret": 6, "pitch": "F4", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato"}]}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 3, "pitch": "G4"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 6, "pitch": "F4", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 3, "pitch": "D4"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 5, "pitch": "C4"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 3, "pitch": "A#3", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 5, "pitch": "C4"}]},
+      {"duration": "4", "dotted": true, "notes": [{"string": 4, "fret": 5, "pitch": "G3", "techniques": [{"type": "vibrato"}]}]}
+    ] },
+    { "events": [
+      {"duration": "16", "notes": [{"string": 1, "fret": 6, "pitch": "A#4", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "notes": [{"string": 1, "fret": 3, "pitch": "G4"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 6, "pitch": "F4"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 3, "pitch": "D4"}]},
+      {"duration": "4", "dotted": true, "notes": [{"string": 3, "fret": 5, "pitch": "C4", "techniques": [{"type": "bendRelease", "semitones": 2}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 3, "pitch": "A#3"}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 5, "pitch": "G3"}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 3, "pitch": "F3"}]},
+      {"duration": "4", "dotted": true, "notes": [{"string": 6, "fret": 3, "pitch": "G2", "techniques": [{"type": "letRing"}]}]}
+    ] }
+  ],
+  "tips": "Feel it in four big beats of three. Let every bend breathe and add vibrato only once the bend reaches pitch."
+}

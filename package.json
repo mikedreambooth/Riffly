@@ -1,0 +1,23 @@
+{
+  "name": "riffly",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @riffly/server & npm run dev --workspace @riffly/web",
+    "dev:server": "npm run dev --workspace @riffly/server",
+    "dev:web": "npm run dev --workspace @riffly/web",
+    "riff": "tsx apps/server/src/cli.ts",
+    "typecheck": "tsc -p .",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  }
+}

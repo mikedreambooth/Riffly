@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "title": "Dropforge",
+  "meta": {"style": "drop D groove metal", "key": {"tonic": "D", "mode": "minor"}, "tempo": 140, "timeSignature": {"beats": 4, "beatUnit": 4}, "tuning": ["E4", "B3", "G3", "D3", "A2", "D2"], "tone": "distortion", "difficulty": 3},
+  "bars": [
+    { "events": [
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 0, "pitch": "A2", "techniques": [{"type": "accent"}]}, {"string": 4, "fret": 0, "pitch": "D3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "F2"}, {"string": 5, "fret": 3, "pitch": "C3"}, {"string": 4, "fret": 3, "pitch": "F3"}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "G2"}, {"string": 5, "fret": 5, "pitch": "D3"}, {"string": 4, "fret": 5, "pitch": "G3"}]},
+      {"duration": "4", "notes": [{"string": 6, "fret": 3, "pitch": "F2"}, {"string": 5, "fret": 3, "pitch": "C3"}, {"string": 4, "fret": 3, "pitch": "F3"}]}
+    ] },
+    { "events": [
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 8, "pitch": "A#2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 8, "pitch": "F3", "techniques": [{"type": "accent"}]}, {"string": 4, "fret": 8, "pitch": "A#3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 7, "pitch": "A2"}, {"string": 5, "fret": 7, "pitch": "E3"}, {"string": 4, "fret": 7, "pitch": "A3"}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "F2"}, {"string": 5, "fret": 3, "pitch": "C3"}, {"string": 4, "fret": 3, "pitch": "F3"}]},
+      {"duration": "4", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "letRing"}]}, {"string": 5, "fret": 0, "pitch": "A2", "techniques": [{"type": "letRing"}]}, {"string": 4, "fret": 0, "pitch": "D3", "techniques": [{"type": "letRing"}]}]}
+    ] },
+    { "events": [
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 0, "pitch": "A2", "techniques": [{"type": "accent"}]}, {"string": 4, "fret": 0, "pitch": "D3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "F2"}, {"string": 5, "fret": 3, "pitch": "C3"}, {"string": 4, "fret": 3, "pitch": "F3"}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "G2"}, {"string": 5, "fret": 5, "pitch": "D3"}, {"string": 4, "fret": 5, "pitch": "G3"}]},
+      {"duration": "4", "notes": [{"string": 6, "fret": 3, "pitch": "F2"}, {"string": 5, "fret": 3, "pitch": "C3"}, {"string": 4, "fret": 3, "pitch": "F3"}]}
+    ] },
+    { "events": [
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "F2"}, {"string": 5, "fret": 3, "pitch": "C3"}, {"string": 4, "fret": 3, "pitch": "F3"}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "G2"}, {"string": 5, "fret": 5, "pitch": "D3"}, {"string": 4, "fret": 5, "pitch": "G3"}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 8, "pitch": "A#2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 8, "pitch": "F3", "techniques": [{"type": "accent"}]}, {"string": 4, "fret": 8, "pitch": "A#3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 7, "pitch": "A2"}, {"string": 5, "fret": 7, "pitch": "E3"}, {"string": 4, "fret": 7, "pitch": "A3"}]},
+      {"duration": "4", "notes": [{"string": 6, "fret": 0, "pitch": "D2", "techniques": [{"type": "letRing"}]}, {"string": 5, "fret": 0, "pitch": "A2", "techniques": [{"type": "letRing"}]}, {"string": 4, "fret": 0, "pitch": "D3", "techniques": [{"type": "letRing"}]}]}
+    ] }
+  ],
+  "tips": "Barre the bottom three strings with one finger for each power chord, and lock the sixteenth chugs to the kick drum."
+}

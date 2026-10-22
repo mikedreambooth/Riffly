@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "title": "Crossroads Ache",
+  "meta": {
+    "style": "blues rock",
+    "key": { "tonic": "A", "mode": "minor" },
+    "tempo": 92,
+    "timeSignature": { "beats": 4, "beatUnit": 4 },
+    "tuning": ["E4", "B3", "G3", "D3", "A2", "E2"],
+    "tone": "overdrive",
+    "difficulty": 3
+  },
+  "bars": [
+    { "events": [
+      { "duration": "8", "notes": [{ "string": 2, "fret": 8, "pitch": "G4", "techniques": [{ "type": "bend", "semitones": 2 }] }] },
+      { "duration": "8", "notes": [{ "string": 1, "fret": 5, "pitch": "A4" }] },
+      { "duration": "16", "notes": [{ "string": 2, "fret": 8, "pitch": "G4", "techniques": [{ "type": "pullOff" }] }] },
+      { "duration": "16", "notes": [{ "string": 2, "fret": 5, "pitch": "E4" }] },
+      { "duration": "8", "notes": [{ "string": 3, "fret": 7, "pitch": "D4" }] },
+      { "duration": "8", "notes": [{ "string": 3, "fret": 5, "pitch": "C4", "techniques": [{ "type": "hammerOn" }] }] },
+      { "duration": "8", "notes": [{ "string": 3, "fret": 7, "pitch": "D4" }] },
+      { "duration": "4", "notes": [{ "string": 4, "fret": 7, "pitch": "A3", "techniques": [{ "type": "vibrato" }] }] }
+    ] },
+    { "events": [
+      { "duration": "8", "notes": [{ "string": 5, "fret": 0, "pitch": "A2", "techniques": [{ "type": "palmMute" }] }] },
+      { "duration": "8", "notes": [{ "string": 5, "fret": 0, "pitch": "A2", "techniques": [{ "type": "palmMute" }] }] },
+      { "duration": "8", "notes": [{ "string": 5, "fret": 3, "pitch": "C3" }] },
+      { "duration": "8", "notes": [{ "string": 5, "fret": 0, "pitch": "A2", "techniques": [{ "type": "palmMute" }] }] },
+      { "duration": "8", "notes": [{ "string": 4, "fret": 2, "pitch": "E3" }] },
+      { "duration": "8", "notes": [{ "string": 5, "fret": 3, "pitch": "C3", "techniques": [{ "type": "slide" }] }] },
+      { "duration": "8", "notes": [{ "string": 5, "fret": 5, "pitch": "D3" }] },
+      { "duration": "8", "notes": [{ "string": 4, "fret": 2, "pitch": "E3" }] }
+    ] },
+    { "events": [
+      { "duration": "8", "dotted": true, "notes": [{ "string": 2, "fret": 8, "pitch": "G4", "techniques": [{ "type": "bend", "semitones": 2 }, { "type": "vibrato" }] }] },
+      { "duration": "16", "notes": [{ "string": 1, "fret": 5, "pitch": "A4" }] },
+      { "duration": "8", "notes": [{ "string": 1, "fret": 8, "pitch": "C5", "techniques": [{ "type": "pullOff" }] }] },
+      { "duration": "8", "notes": [{ "string": 1, "fret": 5, "pitch": "A4" }] },
+      { "duration": "8", "notes": [{ "string": 2, "fret": 8, "pitch": "G4" }] },
+      { "duration": "8", "notes": [{ "string": 2, "fret": 5, "pitch": "E4" }] },
+      { "duration": "4", "notes": [{ "string": 3, "fret": 7, "pitch": "D4", "techniques": [{ "type": "bend", "semitones": 2 }] }] }
+    ] },
+    { "events": [
+      { "duration": "16", "notes": [{ "string": 3, "fret": 5, "pitch": "C4" }] },
+      { "duration": "16", "notes": [{ "string": 4, "fret": 7, "pitch": "A3" }] },
+      { "duration": "16", "notes": [{ "string": 4, "fret": 5, "pitch": "G3" }] },
+      { "duration": "16", "notes": [{ "string": 5, "fret": 7, "pitch": "E3" }] },
+      { "duration": "8", "notes": [{ "string": 5, "fret": 3, "pitch": "C3" }] },
+      { "duration": "8", "notes": [{ "string": 6, "fret": 5, "pitch": "A2" }] },
+      { "duration": "2", "notes": [
+        { "string": 5, "fret": 0, "pitch": "A2", "techniques": [{ "type": "letRing" }] },
+        { "string": 4, "fret": 2, "pitch": "E3", "techniques": [{ "type": "letRing" }] }
+      ] }
+    ] }
+  ],
+  "tips": "Make the B-string bends hit pitch (match the high E 5th fret). Keep the palm-muted open A tight and let the final A5 dyad ring."
+}

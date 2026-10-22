@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "title": "Iron Gallop",
+  "meta": {"style": "heavy metal gallop", "key": {"tonic": "E", "mode": "minor"}, "tempo": 150, "timeSignature": {"beats": 4, "beatUnit": 4}, "tuning": ["E4", "B3", "G3", "D3", "A2", "E2"], "tone": "distortion", "difficulty": 3},
+  "bars": [
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "G2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 5, "pitch": "D3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "A2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 7, "pitch": "E3", "techniques": [{"type": "accent"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 5, "fret": 2, "pitch": "B2"}]},
+      {"duration": "16", "notes": [{"string": 5, "fret": 3, "pitch": "C3"}]},
+      {"duration": "8", "notes": [{"string": 5, "fret": 5, "pitch": "D3"}]},
+      {"duration": "8", "notes": [{"string": 5, "fret": 3, "pitch": "C3"}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "G2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 5, "pitch": "D3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "A2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 7, "pitch": "E3", "techniques": [{"type": "accent"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "16", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "palmMute"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 3, "pitch": "G2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 5, "pitch": "D3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "8", "notes": [{"string": 6, "fret": 5, "pitch": "A2", "techniques": [{"type": "accent"}]}, {"string": 5, "fret": 7, "pitch": "E3", "techniques": [{"type": "accent"}]}]},
+      {"duration": "4", "notes": [{"string": 6, "fret": 0, "pitch": "E2", "techniques": [{"type": "letRing"}]}, {"string": 5, "fret": 2, "pitch": "B2", "techniques": [{"type": "letRing"}]}]}
+    ] }
+  ],
+  "tips": "Use strict down-up-down picking for each gallop (eighth + two sixteenths) and keep the palm on the bridge so the open E stays tight."
+}
