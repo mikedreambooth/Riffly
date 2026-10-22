@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "title": "Amazing Grace",
+  "meta": {"style": "gospel hymn melody, Amazing Grace, soulful lead guitar", "key": {"tonic": "G", "mode": "major"}, "tempo": 72, "timeSignature": {"beats": 3, "beatUnit": 4}, "tuning": ["E4", "B3", "G3", "D3", "A2", "E2"], "tone": "crunch", "difficulty": 3},
+  "bars": [
+    { "events": [
+      {"duration": "2", "notes": []},
+      {"duration": "4", "notes": [{"string": 3, "fret": 7, "pitch": "D4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 8, "pitch": "G4", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 7, "pitch": "B4"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 8, "pitch": "G4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 10, "pitch": "A4", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato", "wide": true}]}]},
+      {"duration": "4", "notes": [{"string": 2, "fret": 10, "pitch": "A4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 8, "pitch": "G4", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 9, "pitch": "E4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 3, "fret": 7, "pitch": "D4", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 7, "pitch": "D4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 8, "pitch": "G4", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 7, "pitch": "B4"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 8, "pitch": "G4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 10, "pitch": "A4", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato", "wide": true}]}]},
+      {"duration": "4", "notes": [{"string": 2, "fret": 10, "pitch": "A4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 1, "fret": 10, "pitch": "D5", "techniques": [{"type": "vibrato", "wide": true}]}]},
+      {"duration": "4", "notes": [{"string": 1, "fret": 7, "pitch": "B4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 1, "fret": 10, "pitch": "D5", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 7, "pitch": "B4"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 8, "pitch": "G4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 1, "fret": 7, "pitch": "B4", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "4", "notes": [{"string": 2, "fret": 10, "pitch": "A4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 8, "pitch": "G4", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 9, "pitch": "E4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 3, "fret": 7, "pitch": "D4", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 7, "pitch": "D4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 8, "pitch": "G4", "techniques": [{"type": "vibrato"}]}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 7, "pitch": "B4"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 8, "pitch": "G4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 10, "pitch": "A4", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato", "wide": true}]}]},
+      {"duration": "4", "notes": [{"string": 2, "fret": 10, "pitch": "A4"}]}
+    ] },
+    { "events": [
+      {"duration": "2", "dotted": true, "notes": [{"string": 2, "fret": 8, "pitch": "G4", "techniques": [{"type": "letRing"}]}, {"string": 1, "fret": 7, "pitch": "B4", "techniques": [{"type": "letRing"}, {"type": "vibrato", "wide": true}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 2, "fret": 10, "pitch": "A4", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 12, "pitch": "B4"}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 10, "pitch": "D5"}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 7, "pitch": "B4"}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 12, "pitch": "G4", "techniques": [{"type": "letRing"}]}, {"string": 2, "fret": 12, "pitch": "B4", "techniques": [{"type": "letRing"}]}, {"string": 1, "fret": 10, "pitch": "D5", "techniques": [{"type": "letRing"}, {"type": "vibrato"}]}]}
+    ] }
+  ],
+  "tips": "Sing the words in your head as you play, and give each long note the vibrato a singer would. The bends on 'grace', 'wretch' and 'now' must land exactly on B; check them against the B at the 7th fret of the high E string."
+}
