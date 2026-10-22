@@ -2,7 +2,8 @@ import "./env.ts";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { parseRiff, riffToAscii, riffToMidi, validateRiff, type Issue, type Riff } from "@riffly/core";
+import { execFileSync } from "node:child_process";
+import { parseRiff, riffToAscii, riffToMidi, riffToWav, validateRiff, type Issue, type Riff } from "@riffly/core";
 import { buildUserPrompt, generatorFromEnv, LlmRiffGenerator, logGeneration, ReplayProvider, SYSTEM_PROMPT } from "@riffly/llm";
 import { toRiffRequest } from "./request.ts";
 
@@ -23,7 +24,8 @@ Other options:
   --response <file>           replay a hand-written LLM response instead of calling a provider;
                               repeat for repair attempts (2nd file answers the 1st repair prompt)
   --out <dir>                 (default: out)
-  --count-in <bars>           metronome bars before the riff in the MIDI file
+  --count-in <bars>           metronome bars before the riff in the MIDI/audio file
+  --audio                     also render <slug>.wav (and <slug>.mp3 if ffmpeg is installed)
 `;
 
 const { positionals, values } = parseArgs({
@@ -41,6 +43,7 @@ const { positionals, values } = parseArgs({
     response: { type: "string", multiple: true },
     out: { type: "string", default: "out" },
     "count-in": { type: "string", default: "0" },
+    audio: { type: "boolean", default: false },
     help: { type: "boolean", short: "h" },
   },
 });
@@ -69,8 +72,20 @@ function writeOutputs(riff: Riff): void {
   const slug = riff.title.replace(/[^\w-]+/g, "-").replace(/^-|-$/g, "").toLowerCase() || "riff";
   const base = join(values.out!, slug);
   writeFileSync(`${base}.json`, JSON.stringify(riff, null, 2) + "\n");
-  writeFileSync(`${base}.mid`, riffToMidi(riff, { countInBars: Number(values["count-in"]) }));
-  console.log(`\nWrote ${base}.json and ${base}.mid`);
+  const countInBars = Number(values["count-in"]);
+  writeFileSync(`${base}.mid`, riffToMidi(riff, { countInBars }));
+  const written = [`${base}.json`, `${base}.mid`];
+  if (values.audio) {
+    writeFileSync(`${base}.wav`, riffToWav(riff, { countInBars }));
+    written.push(`${base}.wav`);
+    try {
+      execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", `${base}.wav`, "-b:a", "192k", `${base}.mp3`]);
+      written.push(`${base}.mp3`);
+    } catch {
+      // ffmpeg not installed: the WAV is still there.
+    }
+  }
+  console.log(`\nWrote ${written.join(", ")}`);
 }
 
 async function main() {

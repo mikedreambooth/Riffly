@@ -76,7 +76,7 @@ export function buildUserPrompt(req: RiffRequest): string {
   const { timeSignature: ts } = req;
   const barSubdivisions = barTicks(ts) / (PPQ / 4);
   const lines = [
-    `Write a ${req.style} guitar riff.`,
+    `Write a guitar riff/lick in this style: ${req.style}.`,
     `- Key: ${req.key.tonic} ${req.key.mode}`,
     `- Tempo: ${req.tempo} BPM`,
     `- Time signature: ${ts.beats}/${ts.beatUnit} (one bar = ${barSubdivisions} sixteenths)`,

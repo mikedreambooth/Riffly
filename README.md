@@ -41,7 +41,7 @@ npm run riff -- validate fixtures/riffs/*.json                  # check riffs + 
 npm run riff -- midi path/to/riff.json --out out
 ```
 
-`generate` writes `out/<title>.json` and `out/<title>.mid`. Every generation is appended to
+`generate` writes `out/<title>.json` and `out/<title>.mid`; add `--audio` for `.wav` (and `.mp3` when ffmpeg is installed). Every generation is appended to
 `.riffly/logs/generations.jsonl`, with the request, each attempt's raw output, its issues and its latency,
 so you can compare models and prompts.
 
@@ -108,6 +108,8 @@ It reports chromatic notes, large stretches and fast position jumps as warnings.
 The MIDI export uses 480 PPQ. It picks a GM program from `tone` and sets the pitch-bend range to ±12. It
 renders bends, bend-releases, vibrato and slides as pitch-bend curves, and palm mutes, dead notes and
 accents as changes in note length and velocity. A metronome count-in is optional.
+
+For devices without a MIDI player, `renderRiffAudio()` / `riffToWav()` (`packages/core/src/audio.ts`) render the riff directly to audio with a small built-in guitar synth: Karplus-Strong strings with continuous pitch for bends, vibrato and slides, then amp drive, a cabinet filter and echo set by `tone`. It works in the browser (the web UI's "Download audio" button) and from the CLI.
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from "react";
-import { MODES, riffToAscii, riffToMidi, TUNINGS, type Riff } from "@riffly/core";
+import { MODES, riffToAscii, riffToMidi, riffToWav, TUNINGS, type Riff } from "@riffly/core";
 import { generateRiff, health, type GenerateResponse, type RiffForm } from "./api.ts";
 
 const TONICS = ["C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B"];
@@ -124,6 +124,9 @@ export function App() {
                 </label>
                 <button onClick={() => download(riffToMidi(riff, { countInBars: countIn ? 1 : 0 }) as BlobPart, "audio/midi", `${slug(riff)}.mid`)}>
                   Download MIDI
+                </button>
+                <button onClick={() => download(riffToWav(riff, { countInBars: countIn ? 1 : 0 }) as BlobPart, "audio/wav", `${slug(riff)}.wav`)}>
+                  Download audio
                 </button>
                 <button className="secondary" onClick={() => download(JSON.stringify(riff, null, 2), "application/json", `${slug(riff)}.json`)}>
                   JSON

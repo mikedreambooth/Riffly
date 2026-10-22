@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import * as ToneMidi from "@tonejs/midi";
 import {
   hasErrors, keyPrefersFlats, parseKey, parseRiff, pitchToMidi, riffToAscii, riffToMidi,
-  RiffRequestSchema, transposeToKey, validateRiff, type Riff,
+  renderRiffAudio, RiffRequestSchema, riffToWav, transposeToKey, validateRiff, type Riff,
 } from "../src/index.ts";
 
 const Midi = ToneMidi.Midi ?? (ToneMidi as unknown as { default: typeof ToneMidi }).default.Midi;
@@ -122,5 +122,29 @@ describe("riffToAscii", () => {
     expect(tab).toContain("8b10");
     expect(tab).toContain("5h");
     expect(tab).toContain("PM");
+  });
+});
+
+describe("audio", () => {
+  it("renders the riff at the right length with sane levels", () => {
+    const riff = load("beginner-rock-a-minor.json"); // 4 bars of 4/4 at 80 BPM = 12 s
+    const { samples, sampleRate } = renderRiffAudio(riff, { sampleRate: 16000 });
+    const seconds = samples.length / sampleRate;
+    expect(seconds).toBeGreaterThan(12);
+    expect(seconds).toBeLessThan(14);
+    let peak = 0;
+    for (const v of samples) {
+      expect(Number.isFinite(v)).toBe(true);
+      peak = Math.max(peak, Math.abs(v));
+    }
+    expect(peak).toBeCloseTo(0.89, 2);
+  });
+
+  it("writes a valid WAV header", () => {
+    const wav = riffToWav(load("folk-waltz-g-major-3-4.json"), { sampleRate: 8000 });
+    const text = new TextDecoder().decode(wav.subarray(0, 16));
+    expect(text.startsWith("RIFF")).toBe(true);
+    expect(text.slice(8, 16)).toBe("WAVEfmt ");
+    expect(new DataView(wav.buffer).getUint32(24, true)).toBe(8000);
   });
 });
