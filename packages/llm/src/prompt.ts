@@ -52,7 +52,7 @@ FORMAT
 - Techniques per note: bend/bendRelease (with "semitones": 1 = half step, 2 = whole step), vibrato
   ("wide": true optional), hammerOn / pullOff / slide (these connect THIS note to the NEXT note on the
   SAME string: hammerOn goes to a higher fret, pullOff to a lower fret), palmMute, letRing,
-  deadNote, harmonic, pinchHarmonic (squeal), whammyDive (with "semitones" = dive depth, open strings OK), accent.
+  deadNote, harmonic, tap (two-hand tapping, usually with pullOff), pinchHarmonic (squeal), whammyDive (with "semitones" = dive depth, open strings OK), accent.
 - "tone" picks the guitar sound: clean, crunch, overdrive, distortion, acoustic or nylon.
 
 RULES

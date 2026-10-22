@@ -36,6 +36,7 @@ export const TECHNIQUES = [
   "deadNote",    // muted "x" note; fret is where the hand sits
   "harmonic",    // natural harmonic
   "pinchHarmonic", // picked "squeal": pick and thumb together, sounds an overtone
+  "tap",         // picking-hand tap on the fret (usually followed by a pullOff)
   "whammyDive",  // whammy-bar dive down by `semitones` during the note (open strings OK)
   "accent",
 ] as const;

@@ -7,6 +7,7 @@ function noteLabel(n: Note): string {
   const tech = new Map((n.techniques ?? []).map((t) => [t.type, t]));
   if (tech.has("deadNote")) return "x";
   let s = tech.has("harmonic") ? `<${n.fret}>` : String(n.fret);
+  if (tech.has("tap")) s = `t${s}`;
   const bend = tech.get("bend") ?? tech.get("bendRelease");
   if (bend?.semitones) {
     const target = n.fret + bend.semitones;

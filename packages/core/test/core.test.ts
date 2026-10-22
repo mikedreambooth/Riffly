@@ -105,6 +105,14 @@ describe("metal techniques", () => {
     expect(riffToAscii(r)).toContain("PH");
   });
 
+  it("marks taps in the tab and rejects tapping an open string", () => {
+    const r = clone(load("blues-rock-a-minor.json"));
+    r.bars[0]!.events[1]!.notes[0]!.techniques = [{ type: "tap" }];
+    expect(riffToAscii(r)).toContain("t5");
+    r.bars[1]!.events[0]!.notes[0]!.techniques = [{ type: "tap" }];
+    expect(codes(r)).toContain("open_tap");
+  });
+
   it("rejects bends wider than three semitones", () => {
     const r = clone(load("blues-rock-a-minor.json"));
     r.bars[0]!.events[0]!.notes[0]!.techniques = [{ type: "bend", semitones: 5 }];

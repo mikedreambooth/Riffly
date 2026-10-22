@@ -129,6 +129,10 @@ export function validateRiff(riff: Riff, request?: RiffRequest): Issue[] {
             issues.push({ level: "error", code: "bend_amount", bar: b, event: e,
               message: `${where}: ${t.type} needs "semitones".` });
           }
+          if (t.type === "tap" && note.fret === 0) {
+            issues.push({ level: "error", code: "open_tap", bar: b, event: e,
+              message: `${where}: an open string can't be tapped.` });
+          }
           if (BEND.has(t.type) && note.fret === 0) {
             issues.push({ level: "error", code: "open_bend", bar: b, event: e,
               message: `${where}: open strings can't be bent.` });

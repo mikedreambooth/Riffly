@@ -60,7 +60,8 @@ export function performRiff(riff: Riff): PerformedNote[] {
         let duration = Math.round(len * 0.95);
         const onBeat = (tick - bi * barLen) % beatLen === 0;
         let velocity = onBeat ? 0.85 : 0.75;
-        const legato = legatoStrings.has(note.string);
+        // A tap is its own attack, even straight after a hammer-on or pull-off.
+        const legato = legatoStrings.has(note.string) && !tech.has("tap");
 
         if (legato) velocity -= 0.15;
         if (tech.has("accent")) velocity += 0.12;
