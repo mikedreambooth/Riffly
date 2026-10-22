@@ -35,6 +35,8 @@ npm run typecheck
 npm run riff -- generate --style "blues rock" --key "A minor" --tempo 92 --bars 4 --count-in 1
 npm run riff -- generate --provider gemini --style "surf rock" --key "E harmonicMinor" --difficulty 4
 npm run riff -- prompt   --style "funk" --key "E dorian"      # print the exact LLM prompt
+# stand in for the LLM: replay hand-written replies through the real loop (2nd file answers the repair prompt)
+npm run riff -- generate --style "celtic jig" --time 6/8 --key D --response reply1.json --response reply2.json
 npm run riff -- validate fixtures/riffs/*.json                  # check riffs + print tab
 npm run riff -- midi path/to/riff.json --out out
 ```

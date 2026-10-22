@@ -76,3 +76,24 @@ function demoteNumericEnums(schema: unknown): unknown {
     return out;
   });
 }
+
+/**
+ * Plays back pre-written responses in order: lets a human (or another model in
+ * another tool) stand in for the LLM while exercising the real generation loop.
+ */
+export class ReplayProvider implements LlmProvider {
+  readonly name = "replay";
+  readonly model: string;
+  readonly calls: JsonCompletionRequest[] = [];
+
+  constructor(private readonly responses: string[], model = "scripted") {
+    this.model = model;
+  }
+
+  async complete(req: JsonCompletionRequest): Promise<JsonCompletion> {
+    this.calls.push(structuredClone(req));
+    const text = this.responses[this.calls.length - 1];
+    if (text === undefined) throw new Error(`Replay ran out of responses after ${this.responses.length}`);
+    return { text, model: this.model, latencyMs: 0 };
+  }
+}

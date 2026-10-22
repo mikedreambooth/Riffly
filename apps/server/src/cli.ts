@@ -3,7 +3,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
 import { parseRiff, riffToAscii, riffToMidi, validateRiff, type Issue, type Riff } from "@riffly/core";
-import { buildUserPrompt, generatorFromEnv, logGeneration, SYSTEM_PROMPT } from "@riffly/llm";
+import { buildUserPrompt, generatorFromEnv, LlmRiffGenerator, logGeneration, ReplayProvider, SYSTEM_PROMPT } from "@riffly/llm";
 import { toRiffRequest } from "./request.ts";
 
 const USAGE = `Usage: npm run riff -- <command> [options]
@@ -20,6 +20,8 @@ Request options (generate, prompt, validate):
 
 Other options:
   --provider gemini|fixture   (default: $RIFFLY_PROVIDER or fixture)
+  --response <file>           replay a hand-written LLM response instead of calling a provider;
+                              repeat for repair attempts (2nd file answers the 1st repair prompt)
   --out <dir>                 (default: out)
   --count-in <bars>           metronome bars before the riff in the MIDI file
 `;
@@ -36,6 +38,7 @@ const { positionals, values } = parseArgs({
     tuning: { type: "string" },
     extra: { type: "string" },
     provider: { type: "string" },
+    response: { type: "string", multiple: true },
     out: { type: "string", default: "out" },
     "count-in": { type: "string", default: "0" },
     help: { type: "boolean", short: "h" },
@@ -80,7 +83,10 @@ async function main() {
     }
     case "generate": {
       if (values.provider) process.env.RIFFLY_PROVIDER = values.provider;
-      const generator = generatorFromEnv();
+      const replies = values.response?.map((f) => readFileSync(f, "utf8"));
+      const generator = replies
+        ? new LlmRiffGenerator(new ReplayProvider(replies), { maxAttempts: replies.length })
+        : generatorFromEnv();
       const req = request();
       console.log(`Generating with ${generator.name}...`);
       const result = await generator.generate(req);
