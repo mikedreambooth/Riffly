@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "title": "Testify in Eb",
+  "meta": {"style": "soulful blues rock solo, Eric Gales style", "key": {"tonic": "Eb", "mode": "dorian"}, "tempo": 72, "timeSignature": {"beats": 4, "beatUnit": 4}, "tuning": ["Eb4", "Bb3", "Gb3", "Db3", "Ab2", "Eb2"], "tone": "overdrive", "difficulty": 4},
+  "bars": [
+    { "events": [
+      {"duration": "8", "notes": []},
+      {"duration": "8", "notes": [{"string": 3, "fret": 12, "pitch": "Gb4", "techniques": [{"type": "slide"}]}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 14, "pitch": "Ab4"}]},
+      {"duration": "4", "dotted": true, "notes": [{"string": 2, "fret": 15, "pitch": "Db5", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato", "wide": true}]}]},
+      {"duration": "4", "notes": [{"string": 1, "fret": 12, "pitch": "Eb5", "techniques": [{"type": "vibrato"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 3, "fret": 14, "pitch": "Ab4"}, {"string": 1, "fret": 14, "pitch": "F5"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 12, "pitch": "Gb4"}, {"string": 1, "fret": 12, "pitch": "Eb5"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 11, "pitch": "F4"}, {"string": 1, "fret": 10, "pitch": "Db5"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 9, "pitch": "Eb4"}, {"string": 1, "fret": 8, "pitch": "B4"}]},
+      {"duration": "2", "notes": [{"string": 4, "fret": 9, "pitch": "Bb3", "techniques": [{"type": "vibrato"}]}, {"string": 2, "fret": 8, "pitch": "Gb4", "techniques": [{"type": "vibrato"}]}]}
+    ] },
+    { "events": [
+      {"duration": "16", "notes": [{"string": 1, "fret": 15, "pitch": "Gb5", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "notes": [{"string": 1, "fret": 12, "pitch": "Eb5"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 15, "pitch": "Db5"}]},
+      {"duration": "16", "notes": [{"string": 3, "fret": 15, "pitch": "A4", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "notes": [{"string": 3, "fret": 14, "pitch": "Ab4"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 12, "pitch": "Gb4"}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 14, "pitch": "Eb4"}]},
+      {"duration": "8", "notes": [{"string": 4, "fret": 12, "pitch": "Db4"}]},
+      {"duration": "4", "notes": [{"string": 4, "fret": 14, "pitch": "Eb4", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato"}]}]}
+    ] },
+    { "events": [
+      {"duration": "2", "notes": [{"string": 2, "fret": 17, "pitch": "Eb5", "techniques": [{"type": "bend", "semitones": 3}, {"type": "vibrato", "wide": true}]}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 15, "pitch": "Gb5"}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 12, "pitch": "Eb5"}]},
+      {"duration": "4", "notes": [{"string": 2, "fret": 14, "pitch": "C5", "techniques": [{"type": "vibrato"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "triplet": true, "notes": [{"string": 3, "fret": 12, "pitch": "Gb4", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 3, "fret": 14, "pitch": "Ab4"}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 2, "fret": 12, "pitch": "Bb4", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 2, "fret": 14, "pitch": "C5", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 2, "fret": 15, "pitch": "Db5"}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 1, "fret": 12, "pitch": "Eb5", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 1, "fret": 14, "pitch": "F5", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 1, "fret": 15, "pitch": "Gb5", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 1, "fret": 17, "pitch": "Ab5", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 1, "fret": 15, "pitch": "Gb5", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 1, "fret": 14, "pitch": "F5", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "8", "triplet": true, "notes": [{"string": 1, "fret": 12, "pitch": "Eb5"}]}
+    ] },
+    { "events": [
+      {"duration": "16", "triplet": true, "notes": [{"string": 1, "fret": 17, "pitch": "Ab5", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 1, "fret": 15, "pitch": "Gb5", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 1, "fret": 14, "pitch": "F5"}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 2, "fret": 15, "pitch": "Db5", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 2, "fret": 14, "pitch": "C5", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 2, "fret": 12, "pitch": "Bb4"}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 3, "fret": 14, "pitch": "Ab4", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 3, "fret": 12, "pitch": "Gb4", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 3, "fret": 11, "pitch": "F4"}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 4, "fret": 14, "pitch": "Eb4", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 4, "fret": 12, "pitch": "Db4", "techniques": [{"type": "pullOff"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 4, "fret": 11, "pitch": "C4"}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 4, "fret": 9, "pitch": "Bb3", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 4, "fret": 11, "pitch": "C4", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 4, "fret": 12, "pitch": "Db4"}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 3, "fret": 9, "pitch": "Eb4", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 3, "fret": 11, "pitch": "F4", "techniques": [{"type": "hammerOn"}]}]},
+      {"duration": "16", "triplet": true, "notes": [{"string": 3, "fret": 12, "pitch": "Gb4"}]},
+      {"duration": "4", "notes": [{"string": 3, "fret": 14, "pitch": "Ab4", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato", "wide": true}]}]}
+    ] },
+    { "events": [
+      {"duration": "4", "notes": [{"string": 1, "fret": 20, "pitch": "B5", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato", "wide": true}]}]},
+      {"duration": "4", "notes": [{"string": 1, "fret": 20, "pitch": "B5", "techniques": [{"type": "bend", "semitones": 2}, {"type": "vibrato", "wide": true}]}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 19, "pitch": "Bb5"}]},
+      {"duration": "8", "notes": [{"string": 1, "fret": 17, "pitch": "Ab5"}]},
+      {"duration": "4", "notes": [{"string": 2, "fret": 17, "pitch": "Eb5", "techniques": [{"type": "vibrato"}]}]}
+    ] },
+    { "events": [
+      {"duration": "8", "notes": [{"string": 2, "fret": 15, "pitch": "Db5", "techniques": [{"type": "slide"}]}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 17, "pitch": "Eb5"}]},
+      {"duration": "8", "notes": [{"string": 3, "fret": 14, "pitch": "Ab4"}]},
+      {"duration": "8", "notes": [{"string": 2, "fret": 12, "pitch": "Bb4"}]},
+      {"duration": "2", "notes": [{"string": 3, "fret": 12, "pitch": "Gb4", "techniques": [{"type": "letRing"}]}, {"string": 2, "fret": 12, "pitch": "Bb4", "techniques": [{"type": "letRing"}]}, {"string": 1, "fret": 14, "pitch": "F5", "techniques": [{"type": "letRing"}, {"type": "vibrato"}]}]}
+    ] }
+  ],
+  "tips": "Sing it before you play it: leave the space in bars 1-2 and play slightly behind the beat. Push the bar-4 bend a full step and a half and only start the vibrato once it's in tune; the bar-6 burst should feel like it bursts out of nowhere."
+}
