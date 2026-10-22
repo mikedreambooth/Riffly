@@ -16,6 +16,7 @@ function noteLabel(n: Note): string {
   if (tech.has("hammerOn")) s += "h";
   if (tech.has("pullOff")) s += "p";
   if (tech.has("slide")) s += "/";
+  if (tech.has("whammyDive")) s += `dv${tech.get("whammyDive")!.semitones ?? ""}`;
   if (tech.has("vibrato")) s += tech.get("vibrato")!.wide ? "~~" : "~";
   return s;
 }
@@ -35,7 +36,7 @@ export function riffToAscii(riff: Riff, { width = 100, tips = true }: AsciiOptio
   });
   const nameWidth = Math.max(...names.map((n) => n.length));
 
-  // Render each bar as: palm-mute marks, one row per string, rhythm.
+  // Render each bar as: palm-mute / pinch-harmonic marks, one row per string, rhythm.
   const bars = riff.bars.map((bar) => {
     const rows = names.map(() => "");
     let marks = "";
@@ -45,8 +46,8 @@ export function riffToAscii(riff: Riff, { width = 100, tips = true }: AsciiOptio
       const longest = Math.max(1, ...[...labels.values()].map((l) => l.length));
       const w = Math.max(longest + 1, Math.round(eventTicks(ev) / 80));
       for (let s = 1; s <= strings; s++) rows[s - 1] += (labels.get(s) ?? "").padEnd(w, "-");
-      const pm = ev.notes.some((n) => n.techniques?.some((t) => t.type === "palmMute"));
-      marks += (pm ? "PM" : "").padEnd(w);
+      const has = (type: string) => ev.notes.some((n) => n.techniques?.some((t) => t.type === type));
+      marks += (has("pinchHarmonic") ? "PH" : has("palmMute") ? "PM" : "").padEnd(w);
       const r = ev.notes.length ? RHYTHM[ev.duration]! : "r";
       rhythm += `${r}${ev.dotted ? "." : ""}${ev.triplet ? "3" : ""}`.padEnd(w);
     }

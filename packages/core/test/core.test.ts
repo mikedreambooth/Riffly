@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import * as ToneMidi from "@tonejs/midi";
 import {
   hasErrors, keyPrefersFlats, parseKey, parseRiff, pitchToMidi, riffToAscii, riffToMidi,
-  renderRiffAudio, RiffRequestSchema, riffToWav, transposeToKey, validateRiff, type Riff,
+  performRiff, renderRiffAudio, RiffRequestSchema, riffToWav, transposeToKey, validateRiff, type Riff,
 } from "../src/index.ts";
 
 const Midi = ToneMidi.Midi ?? (ToneMidi as unknown as { default: typeof ToneMidi }).default.Midi;
@@ -83,6 +83,32 @@ describe("validateRiff", () => {
   it("checks bar count against the request", () => {
     const req = RiffRequestSchema.parse({ style: "blues", bars: 8 });
     expect(validateRiff(base, req).map((i) => i.code)).toContain("bar_count");
+  });
+});
+
+describe("metal techniques", () => {
+  const base = load("metal-gallop-e-minor.json");
+
+  it("renders a whammy dive as a downward pitch bend, even on an open string", () => {
+    const r = clone(base);
+    r.bars[0]!.events[0]!.notes[0]!.techniques = [{ type: "whammyDive", semitones: 12 }];
+    expect(codes(r)).toEqual([]);
+    const note = performRiff(r)[0]!;
+    expect(Math.min(...note.bend.map((p) => p.semitones))).toBeCloseTo(-12);
+    expect(riffToAscii(r)).toContain("0dv12");
+  });
+
+  it("sounds pinch harmonics an octave and a fifth up", () => {
+    const r = clone(base);
+    r.bars[0]!.events[0]!.notes[0]!.techniques = [{ type: "pinchHarmonic" }];
+    expect(performRiff(r)[0]!.midi).toBe(pitchToMidi("E2") + 19);
+    expect(riffToAscii(r)).toContain("PH");
+  });
+
+  it("rejects bends wider than three semitones", () => {
+    const r = clone(load("blues-rock-a-minor.json"));
+    r.bars[0]!.events[0]!.notes[0]!.techniques = [{ type: "bend", semitones: 5 }];
+    expect(codes(r)).toContain("bend_amount");
   });
 });
 

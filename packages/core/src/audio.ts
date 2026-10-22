@@ -56,12 +56,15 @@ function bendAt(points: { tick: number; semitones: number }[], tick: number): nu
 
 function renderNote(
   out: Float32Array, n: PerformedNote, sr: number, ticksPerSecond: number, tone: ToneSettings,
-  offsetTicks: number, palmMuted: boolean, random: () => number,
+  offsetTicks: number, palmMuted: boolean, random: () => number, cutTick: number,
 ) {
   const start = Math.round(((n.tick + offsetTicks) / ticksPerSecond) * sr);
   const noteLen = Math.round((n.durationTicks / ticksPerSecond) * sr);
   const release = Math.round(sr * (palmMuted ? 0.03 : 0.08));
-  const end = Math.min(out.length, start + noteLen + release);
+  // A string sounds one note at a time: stop (with a tiny fade) when the next note on it starts.
+  const cut = Math.round(((cutTick + offsetTicks) / ticksPerSecond) * sr);
+  const end = Math.min(out.length, start + noteLen + release, cut);
+  const fade = Math.round(sr * 0.004);
   const bends = [...n.bend].sort((a, b) => a.tick - b.tick);
 
   const size = 4096;
@@ -100,7 +103,8 @@ function renderNote(
     buf[w] = y;
     w = (w + 1) % size;
     // Linear release after note-off (the fretting hand lifting / muting).
-    out[i]! += t < noteLen ? y : y * (1 - (t - noteLen) / release);
+    const env = (t < noteLen ? 1 : 1 - (t - noteLen) / release) * Math.min(1, (end - i) / fade);
+    out[i]! += y * env;
   }
 }
 
@@ -124,8 +128,10 @@ export function renderRiffAudio(riff: Riff, opts: AudioOptions = {}): { samples:
     if (note.techniques?.some((t) => t.type === "palmMute" || t.type === "deadNote")) muted.add(`${bi + 1}:${ei + 1}:${note.string}`);
   })));
 
-  for (const n of notes) {
-    renderNote(out, n, sr, ticksPerSecond, tone, countIn, muted.has(`${n.bar}:${n.event}:${n.string}`), random);
+  for (const [i, n] of notes.entries()) {
+    const next = notes.find((o, j) => j > i && o.string === n.string && o.tick > n.tick);
+    renderNote(out, n, sr, ticksPerSecond, tone, countIn, muted.has(`${n.bar}:${n.event}:${n.string}`), random,
+      next?.tick ?? Infinity);
   }
 
   // Amp: high-pass to remove mud, drive, then a 2-pole cabinet low-pass.

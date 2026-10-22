@@ -68,6 +68,7 @@ export function performRiff(riff: Riff): PerformedNote[] {
         if (tech.has("deadNote")) { duration = Math.min(duration, PPQ / 8); velocity = 0.5; }
         if (tech.has("letRing")) duration = len * 2;
         if (tech.has("harmonic")) midi += note.fret === 7 || note.fret === 19 ? 19 : note.fret === 5 ? 24 : 12;
+        if (tech.has("pinchHarmonic")) { midi += 19; velocity += 0.1; } // the octave-plus-fifth squeal
         if (tech.has("hammerOn") || tech.has("pullOff") || tech.has("slide")) {
           duration = len; // connect into the next note
           nextLegato.add(note.string);
@@ -84,7 +85,17 @@ export function performRiff(riff: Riff): PerformedNote[] {
               { tick: fallStart + Math.round(duration * 0.3), semitones: 0 });
           }
         }
-        const vib = tech.get("vibrato");
+        const dive = tech.get("whammyDive");
+        if (dive?.semitones) {
+          const from = bend.length ? bend[bend.length - 1]!.semitones : 0;
+          const startDive = tick + Math.round(duration * 0.25);
+          bend.push({ tick: startDive, semitones: from });
+          for (let k = 1; k <= 8; k++) {
+            // Ease-in curve: slow start, then the bar drops away.
+            bend.push({ tick: startDive + Math.round(((duration * 0.7) * k) / 8), semitones: from - dive.semitones * (k / 8) ** 2 });
+          }
+        }
+        const vib = dive ? undefined : tech.get("vibrato");
         if (vib) {
           const depth = vib.wide ? 0.5 : 0.25; // semitones
           const base = bend.length ? bend[bend.length - 1]!.semitones : 0;
@@ -100,7 +111,7 @@ export function performRiff(riff: Riff): PerformedNote[] {
           tick, durationTicks: Math.max(1, duration),
           velocity: Math.min(1, Math.max(0.2, velocity)), legato, bend,
         });
-        if (tech.has("slide") && !b && !vib) slides.push(out.length - 1);
+        if (tech.has("slide") && !b && !vib && !dive) slides.push(out.length - 1);
       }
       legatoStrings = nextLegato;
       tick += len;

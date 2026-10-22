@@ -35,6 +35,8 @@ export const TECHNIQUES = [
   "letRing",
   "deadNote",    // muted "x" note; fret is where the hand sits
   "harmonic",    // natural harmonic
+  "pinchHarmonic", // picked "squeal": pick and thumb together, sounds an overtone
+  "whammyDive",  // whammy-bar dive down by `semitones` during the note (open strings OK)
   "accent",
 ] as const;
 
@@ -60,9 +62,9 @@ export const TechniqueSchema = z.object({
   semitones: z
     .number()
     .min(0.5)
-    .max(3)
+    .max(12)
     .optional()
-    .describe("Required for bend/bendRelease: 0.5 = quarter-tone, 1 = half step, 2 = whole step"),
+    .describe("Required for bend/bendRelease (0.5 = quarter-tone, 1 = half step, 2 = whole step, max 3) and whammyDive (depth, up to 12)"),
   wide: z.boolean().optional().describe("vibrato only: wide vibrato"),
 });
 

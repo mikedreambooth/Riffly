@@ -121,7 +121,11 @@ export function validateRiff(riff: Riff, request?: RiffRequest): Issue[] {
             message: `${where}: fret ${note.fret} is above the 22nd fret many guitars have.` });
         }
         for (const t of note.techniques ?? []) {
-          if (BEND.has(t.type) && t.semitones === undefined) {
+          if (BEND.has(t.type) && (t.semitones ?? 0) > 3) {
+            issues.push({ level: "error", code: "bend_amount", bar: b, event: e,
+              message: `${where}: a ${t.semitones}-semitone bend is not physically possible; max 3.` });
+          }
+          if ((BEND.has(t.type) || t.type === "whammyDive") && t.semitones === undefined) {
             issues.push({ level: "error", code: "bend_amount", bar: b, event: e,
               message: `${where}: ${t.type} needs "semitones".` });
           }
